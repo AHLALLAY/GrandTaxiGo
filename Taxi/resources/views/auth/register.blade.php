@@ -95,32 +95,6 @@
                 <div id="role-error" class="text-red-500 text-sm mt-2 hidden"></div>
             </div>
 
-            <!-- Driver Information (Hidden by Default) -->
-            <div id="driver-info" class="space-y-4 hidden">
-                <h2 class="text-lg font-medium text-gray-100">Informations du taxi</h2>
-
-                <!-- Vehicle Brand -->
-                <div>
-                    <label for="brand" class="block text-sm font-medium text-gray-300">Marque du véhicule</label>
-                    <input id="brand" class="block mt-1 w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" type="text" name="brand">
-                    <div id="brand-error" class="text-red-500 text-sm mt-2 hidden"></div>
-                </div>
-
-                <!-- License Plate -->
-                <div>
-                    <label for="immatriculation" class="block text-sm font-medium text-gray-300">Numéro d'immatriculation</label>
-                    <input id="immatriculation" class="block mt-1 w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" type="text" name="immatriculation">
-                    <div id="immatriculation-error" class="text-red-500 text-sm mt-2 hidden"></div>
-                </div>
-
-                <!-- Driver Permit -->
-                <div>
-                    <label for="permit" class="block text-sm font-medium text-gray-300">Numéro de permis</label>
-                    <input id="permit" class="block mt-1 w-full px-3 py-2 border border-gray-600 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" type="text" name="permit">
-                    <div id="permit-error" class="text-red-500 text-sm mt-2 hidden"></div>
-                </div>
-            </div>
-
             <div class="flex items-center justify-end mt-6">
                 <a class="underline text-sm text-gray-400 hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-gray-800" href="/login">
                     Déjà inscrit?
@@ -150,15 +124,7 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
-        function toggleDriverInfo(role) {
-            const driverInfoSection = document.getElementById('driver-info');
-            if (role === 'driver') {
-                driverInfoSection.classList.remove('hidden');
-            } else {
-                driverInfoSection.classList.add('hidden');
-            }
-        }
+        
     </script>
 </body>
 
