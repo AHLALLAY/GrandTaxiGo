@@ -12,7 +12,7 @@
     <div class="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
         <h1 class="text-2xl font-bold text-center mb-6">Créer un compte</h1>
 
-        <form method="POST" action="/register" enctype="multipart/form-data" class="space-y-6">
+        <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" class="space-y-6">
             <!-- CSRF Token (à gérer côté serveur) -->
              @csrf
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
