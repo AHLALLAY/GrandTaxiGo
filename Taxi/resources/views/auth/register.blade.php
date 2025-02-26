@@ -14,8 +14,8 @@
 
         <form method="POST" action="/register" enctype="multipart/form-data" class="space-y-6">
             <!-- CSRF Token (à gérer côté serveur) -->
-            <input type="hidden" name="_token" value="votre_token_csrf">
-
+             @csrf
+            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <!-- Photo -->
             <div class="flex justify-center mb-6">
                 <div class="text-center">
