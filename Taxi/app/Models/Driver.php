@@ -2,22 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Driver extends Model
 {
-    use HasFactory;
+    protected $fillable = ['photo', 'name', 'email', 'password', 'isAvailable',];
+    
+    public function taxi(): HasOne { return $this->hasOne(Taxi::class); }
+    public function travelRoute(): HasMany { return $this->hasMany(TravelRoute::class); }
 
-    protected $fillable = [
-        'user_id',
-        'brand',
-        'registration',
-        'licence',
-    ];
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    // public function reservations(): HasMany { return $this->hasMany(Reservation::class, 'driver_id'); }
 }
